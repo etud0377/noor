@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Set background color for the entire page */
+    color: #333; /* Set default text color */
+    animation: romanticEffect 2s ease-in-out;
+    
+}
+body.clicked {
+    animation: romanticEffect 2s ease-in-out;
+}
+
+@keyframes romanticEffect {
+    0%{
+        background-color: #f8f8f8;
+    }
+    50% {
+        background-color: #ffecf5; /* Romantic pink background color */
+    }
+    100% {
+        background-color: #f8f8f8;
+    }
+
+}
+/* Pink Heart Animation */
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Heart Styles */
+.heart {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #ff66b2; /* Pink heart color */
+    clip-path: polygon(50% 100%, 0 18%, 18% 0, 50% 12%, 82% 0, 100% 18%);
+    animation: heartBeat 1s infinite;
+    z-index: 9999;
+}
+
+
+header {
+    background-color: #ff66b2;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav {
+    background-color: #ff99cc;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Set navigation link color */
+    margin: 0 15px; /* Add margin between navigation links */
+    transition: color 0.3s ease; /* Add a smooth transition effect for color changes */
+}
+
+nav a:hover {
+    color: #ff66b2; /* Change link color on hover */
+}
+
+/* Highlight the active link */
+nav a.active {
+    color: #ff66b2;
+    font-weight: bold;
+}
+
+
+
+
+.main.home {
+    display: flex; /* Use flexbox layout for main content */
+    flex-direction: column;  /* Arrange children in a column */
+    align-items: center; /* Center align children horizontally */
+    padding: 2rem;
+}
+/* Countdown Timer Styles */
+#countdown {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#timer {
+    font-size: 2.5rem; /* Set the font size of the timer */
+    font-family: 'Arial', sans-serif; /* Choose a suitable font family */
+    color: #ff66b2; /* Set timer color */
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff; /* Set background color for the timer */
+    border: 2px solid #ff66b2; /* Add a border around the timer */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for a subtle effect */
+}
+
+/* Pictures Section Styles */
+
+#pictures {
+    display: flex; /* Use flexbox layout for pictures */
+    justify-content: space-around; /* Distribute space evenly between pictures */
+    width: 100%;
+    max-width: 1000px; /* Limit the width of the pictures to 1000px */
+    margin: -1rem auto 1rem auto; /* Adjust the top margin to shift the pictures up slightly */
+}
+.picture {
+    width: 50%; /* Each picture takes 50% of the container width */
+    max-width: 400px; /* Limit the maximum width of each picture to 400px */
+    margin: 1rem 0;
+}
+
+.picture img {
+    width: 100%; /* Make images fill the container */
+    height: 100%; /* Make sure images fill the height proportionally */
+    object-fit: cover; /* Ensure the entire container is covered by the image */
+    border-radius: 10px;  /* Rounded corners for the images */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect for the images */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ff99cc; /* Footer background color */
+    text-align: center;
+    padding: 0.001rem 0;
+    position: fixed; /* Fixed position at the bottom of the page */
+    bottom: 0;
+    width: 100%;
+}
